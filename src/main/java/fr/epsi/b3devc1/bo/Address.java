@@ -24,6 +24,7 @@ public class Address {
     private String city;
 
     @OneToOne
+    @JoinColumn(name = "petstore_id")
     private PetStore petStore;
 
     public Address() {}

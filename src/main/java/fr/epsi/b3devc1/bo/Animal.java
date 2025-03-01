@@ -59,4 +59,14 @@ public class Animal {
     public void setPetStore(PetStore petStore) {
         this.petStore = petStore;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "birth=" + birth +
+                ", color='" + color + '\'' +
+                ", petStore=" + petStore +
+                '}';
+    }
+
 }

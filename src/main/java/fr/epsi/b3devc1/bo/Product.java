@@ -1,5 +1,6 @@
 package fr.epsi.b3devc1.bo;
 
+import fr.epsi.b3devc1.enums.ProdType;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

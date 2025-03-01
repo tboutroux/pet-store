@@ -61,6 +61,16 @@ public class PetStore {
         return products;
     }
 
+    public void addProduct(Product product) {
+        products.add(product);
+        product.getPetStores().add(this);
+    }
+
+    public void removeProduct(Product product) {
+        products.remove(product);
+        product.getPetStores().remove(this);
+    }
+
     public void setProducts(List<Product> products) {
         this.products = products;
     }
@@ -73,11 +83,28 @@ public class PetStore {
         this.address = address;
     }
 
+    public void addAnimal(Animal animal) {
+        animals.add(animal);
+        animal.setPetStore(this);
+    }
+
+    public void removeAnimal(Animal animal) {
+        animals.remove(animal);
+        animal.setPetStore(null);
+    }
+
     public List<Animal> getAnimals() {
         return animals;
     }
 
     public void setAnimals(List<Animal> animals) {
         this.animals = animals;
+    }
+
+    @Override
+    public String toString() {
+        return "PetStore{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
